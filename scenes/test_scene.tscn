@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://mlfopegdrvw6"]
+
+[ext_resource type="PackedScene" uid="uid://i0n7cjiw24yl" path="res://ui/audio_settings/audio_settings.tscn" id="1_g7g4h"]
+
+[node name="TestScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AudioSettings" parent="." instance=ExtResource("1_g7g4h")]
+layout_mode = 1
+offset_left = 24.0
+offset_top = 26.0
+offset_right = -384.0
+offset_bottom = -223.0

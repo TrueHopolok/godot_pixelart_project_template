@@ -16,7 +16,7 @@ config/icon="uid://cu3wdat0ouma0"
 
 [audio]
 
-buses/default_bus_layout=""
+buses/default_bus_layout="uid://dlptv1a5o3dwc"
 
 [display]
 
@@ -34,12 +34,16 @@ project/assembly_name="gamejam_bread_21"
 
 folder_colors={
 "res://assets/": "red",
-"res://audio/": "purple",
+"res://audio/": "yellow",
 "res://objects/": "green",
-"res://scenes/": "teal",
+"res://scenes/": "green",
 "res://scripts/": "blue",
 "res://ui/": "blue"
 }
+
+[global_group]
+
+AudioSettings=""
 
 [gui]
 
