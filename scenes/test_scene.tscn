@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://mlfopegdrvw6"]
+[gd_scene load_steps=3 format=3 uid="uid://mlfopegdrvw6"]
 
 [ext_resource type="PackedScene" uid="uid://i0n7cjiw24yl" path="res://ui/audio_settings/audio_settings.tscn" id="1_g7g4h"]
+[ext_resource type="PackedScene" uid="uid://c4cbgi0tgwths" path="res://ui/premade_button/premade_button.tscn" id="2_j8ivh"]
 
 [node name="TestScene" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_lock_ = true
 
 [node name="AudioSettings" parent="." instance=ExtResource("1_g7g4h")]
 layout_mode = 1
@@ -16,3 +18,22 @@ offset_left = 24.0
 offset_top = 26.0
 offset_right = -384.0
 offset_bottom = -223.0
+
+[node name="PremadeButton" parent="." instance=ExtResource("2_j8ivh")]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 174.0
+offset_right = 222.0
+offset_bottom = 211.0
+
+[node name="PremadeButton2" parent="." instance=ExtResource("2_j8ivh")]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 176.0
+offset_right = 301.0
+offset_bottom = 213.0
+
+[node name="Label" parent="PremadeButton2" index="0"]
+text = "AAA"
+
+[editable path="PremadeButton2"]
