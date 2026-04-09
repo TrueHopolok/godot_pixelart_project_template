@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bp8c21d57debw"]
+
+[ext_resource type="Texture2D" uid="uid://bb8o81ao1k5eg" path="res://assets/art/temperary/button_normal.png" id="1_47xif"]
+[ext_resource type="Texture2D" uid="uid://cip27x0vv7ae8" path="res://assets/art/temperary/button_pressed.png" id="2_d6ccb"]
+[ext_resource type="Texture2D" uid="uid://bn5em7yl11u5c" path="res://assets/art/temperary/button_hovered.png" id="3_kl7kx"]
+[ext_resource type="Script" uid="uid://c6s7s7vb5awmq" path="res://ui/better_button/default_button.gd" id="4_47xif"]
+
+[node name="DefaultButton" type="TextureButton" unique_id=19135458]
+offset_right = 64.0
+offset_bottom = 32.0
+texture_normal = ExtResource("1_47xif")
+texture_pressed = ExtResource("2_d6ccb")
+texture_hover = ExtResource("3_kl7kx")
+stretch_mode = 0
+script = ExtResource("4_47xif")
+metadata/_custom_type_script = "uid://c6s7s7vb5awmq"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cip27x0vv7ae8"
-path="res://.godot/imported/button_pushed.png-42f7fcc3417cbba7c5128f8f44c5b933.ctex"
+uid="uid://bb8o81ao1k5eg"
+path="res://.godot/imported/button_normal.png-1abe6539a888ba64ba3d937a1aa02e66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temperary/button_pushed.png"
-dest_files=["res://.godot/imported/button_pushed.png-42f7fcc3417cbba7c5128f8f44c5b933.ctex"]
+source_file="res://assets/art/temperary/button_normal.png"
+dest_files=["res://.godot/imported/button_normal.png-1abe6539a888ba64ba3d937a1aa02e66.ctex"]
 
 [params]
 

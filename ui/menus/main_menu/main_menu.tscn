@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dh808cqj70n3l"]
+
+[ext_resource type="PackedScene" uid="uid://i0n7cjiw24yl" path="res://ui/settings/audio_settings/audio_settings.tscn" id="2_6s8a2"]
+[ext_resource type="PackedScene" uid="uid://bp8c21d57debw" path="res://ui/better_button/default_button.tscn" id="2_ioe73"]
+[ext_resource type="Script" uid="uid://bltl6imnc8x2t" path="res://ui/menus/main_menu/play_button.gd" id="3_ioe73"]
+[ext_resource type="Script" uid="uid://c3kdhco0ibbsu" path="res://ui/menus/main_menu/reset_button.gd" id="4_txwgg"]
+[ext_resource type="Script" uid="uid://cvah0thg6gaj1" path="res://ui/menus/main_menu/reset_dialog.gd" id="5_j3h1s"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=1082861136]
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=355611257]
+offset_right = 640.0
+offset_bottom = 128.0
+theme_override_font_sizes/normal_font_size = 48
+theme_override_font_sizes/bold_font_size = 48
+theme_override_font_sizes/bold_italics_font_size = 48
+theme_override_font_sizes/italics_font_size = 48
+theme_override_font_sizes/mono_font_size = 48
+text = "THE Game"
+horizontal_alignment = 1
+vertical_alignment = 2
+justification_flags = 162
+
+[node name="AudioSettings" parent="." unique_id=280711572 instance=ExtResource("2_6s8a2")]
+offset_left = 192.0
+offset_top = 192.0
+offset_right = -192.0
+offset_bottom = -44.0
+
+[node name="PlayButton" parent="." unique_id=19135458 instance=ExtResource("2_ioe73")]
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 304.0
+offset_bottom = 176.0
+script = ExtResource("3_ioe73")
+_button_text = "Play"
+
+[node name="ResetButton" parent="." unique_id=1219931786 instance=ExtResource("2_ioe73")]
+offset_left = 336.0
+offset_top = 128.0
+offset_right = 448.0
+offset_bottom = 176.0
+script = ExtResource("4_txwgg")
+_button_text = "Reset progress"
+
+[node name="ResetDialog" type="ConfirmationDialog" parent="ResetButton" unique_id=669866635]
+initial_position = 1
+dialog_text = "Reset all progress?"
+script = ExtResource("5_j3h1s")

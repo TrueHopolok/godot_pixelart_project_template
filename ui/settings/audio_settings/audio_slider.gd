@@ -11,7 +11,7 @@ var _bus_idx: int
 func _ready() -> void:
 	_bus_idx = AudioServer.get_bus_index(bus_name)
 	assert(_bus_idx >= 0, "Error in audio settings: bus name '%s' does not exists" % bus_name)
-	
+
 	if _audio_settings.reset: value = AudioServer.get_bus_volume_linear(_bus_idx)
 	else: value = SettingsCfg.config.get_value(_audio_settings.AUDIO_SECTION, bus_name, AudioServer.get_bus_volume_linear(_bus_idx))
 	_save_volume()

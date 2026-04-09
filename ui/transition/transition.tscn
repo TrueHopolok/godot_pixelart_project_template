@@ -1,21 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgbuo3chtvxju"]
+[gd_scene format=3 uid="uid://dgbuo3chtvxju"]
 
 [ext_resource type="Script" uid="uid://q70brikd4xx1" path="res://ui/transition/transition.gd" id="1_1tu1e"]
 
-[node name="Transition" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Transition" type="CanvasLayer" unique_id=1194481802]
+process_mode = 3
+layer = 5
 script = ExtResource("1_1tu1e")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
+[node name="ColorRect" type="ColorRect" parent="." unique_id=109006236]
+visible = false
+z_index = 100
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 0)
