@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://i0n7cjiw24yl" path="res://ui/settings/audio_settings/audio_settings.tscn" id="1_57ky2"]
 [ext_resource type="Script" uid="uid://qhwla5gydx6a" path="res://ui/menus/pause_menu/pause_menu.gd" id="1_bom27"]
-[ext_resource type="PackedScene" uid="uid://bp8c21d57debw" path="res://ui/better_button/default_button.tscn" id="2_2gx4h"]
 [ext_resource type="Script" uid="uid://c00x45sfie3gw" path="res://ui/menus/pause_menu/continue_button.gd" id="3_2gx4h"]
 [ext_resource type="Script" uid="uid://xgtpha4h67hg" path="res://ui/menus/pause_menu/return_button.gd" id="4_cid4m"]
 [ext_resource type="Script" uid="uid://b1k4yojg5i17i" path="res://ui/menus/pause_menu/return_dialog.gd" id="5_yio2i"]
@@ -38,24 +37,26 @@ offset_top = 256.0
 offset_right = -192.0
 offset_bottom = -1.0
 
-[node name="ContinueButton" parent="." unique_id=19135458 instance=ExtResource("2_2gx4h")]
-offset_left = 192.0
-offset_top = 168.0
-offset_right = 448.0
-offset_bottom = 200.0
+[node name="ContinueButton" type="Button" parent="." unique_id=78623454]
+offset_left = 256.0
+offset_top = 152.0
+offset_right = 384.0
+offset_bottom = 192.0
+text = "Continue"
 script = ExtResource("3_2gx4h")
-_button_text = "Continue"
+metadata/_custom_type_script = "uid://2htt7bkeytt7"
 
-[node name="ReturnButton" parent="." unique_id=1529475848 instance=ExtResource("2_2gx4h")]
-offset_left = 192.0
-offset_top = 208.0
-offset_right = 448.0
-offset_bottom = 248.0
+[node name="ReturnButton" type="Button" parent="." unique_id=1724090446]
+offset_left = 256.0
+offset_top = 200.0
+offset_right = 384.0
+offset_bottom = 240.0
+text = "Return to main menu"
 script = ExtResource("4_cid4m")
-_button_text = "Return to main menu"
+metadata/_custom_type_script = "uid://2htt7bkeytt7"
 
-[node name="ReturnDialog" type="ConfirmationDialog" parent="ReturnButton" unique_id=237851021]
+[node name="ReturnDialog" type="ConfirmationDialog" parent="ReturnButton" unique_id=2080949241]
 initial_position = 1
 dialog_text = "Return to main menu?
-All progress would be lost."
+All current progress would be lost."
 script = ExtResource("5_yio2i")

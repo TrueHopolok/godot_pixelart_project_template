@@ -1,50 +1,9 @@
 [gd_scene format=3 uid="uid://mlfopegdrvw6"]
 
-[ext_resource type="PackedScene" uid="uid://i0n7cjiw24yl" path="res://ui/settings/audio_settings/audio_settings.tscn" id="1_g7g4h"]
-[ext_resource type="Texture2D" uid="uid://bb8o81ao1k5eg" path="res://assets/art/temperary/button_normal.png" id="3_3qnke"]
-[ext_resource type="Script" uid="uid://2htt7bkeytt7" path="res://ui/better_button/better_button.gd" id="3_nd71p"]
-[ext_resource type="Texture2D" uid="uid://cip27x0vv7ae8" path="res://assets/art/temperary/button_pressed.png" id="4_wtsjf"]
-[ext_resource type="Texture2D" uid="uid://bn5em7yl11u5c" path="res://assets/art/temperary/button_hovered.png" id="5_rnaij"]
-[ext_resource type="Script" uid="uid://c6s7s7vb5awmq" path="res://ui/better_button/default_button.gd" id="6_3qnke"]
-[ext_resource type="PackedScene" uid="uid://bp8c21d57debw" path="res://ui/better_button/default_button.tscn" id="7_wtsjf"]
 [ext_resource type="Script" uid="uid://cau4hs0c4s1p8" path="res://scenes/audio/ambient_audio_player/ambient_audio_player.gd" id="8_rnaij"]
 [ext_resource type="PackedScene" uid="uid://cav0jmryusucx" path="res://ui/menus/pause_menu/pause_menu.tscn" id="9_h3xc6"]
 
 [node name="TestScene" type="Node2D" unique_id=988521978]
-
-[node name="AudioSettings" parent="." unique_id=1779526554 instance=ExtResource("1_g7g4h")]
-offset_top = 24.0
-offset_right = 312.0
-offset_bottom = 122.0
-
-[node name="BetterNode" type="TextureButton" parent="." unique_id=1155341276]
-offset_left = 224.0
-offset_top = 136.0
-offset_right = 288.0
-offset_bottom = 176.0
-texture_normal = ExtResource("3_3qnke")
-texture_pressed = ExtResource("4_wtsjf")
-texture_hover = ExtResource("5_rnaij")
-stretch_mode = 0
-script = ExtResource("3_nd71p")
-_button_text = "Better"
-metadata/_custom_type_script = "uid://2htt7bkeytt7"
-
-[node name="DefaultNode" type="TextureButton" parent="." unique_id=1637427185]
-offset_left = 64.0
-offset_top = 136.0
-offset_right = 128.0
-offset_bottom = 176.0
-script = ExtResource("6_3qnke")
-_button_text = "DefaultNode"
-metadata/_custom_type_script = "uid://c6s7s7vb5awmq"
-
-[node name="DefaultScene" parent="." unique_id=19135458 instance=ExtResource("7_wtsjf")]
-offset_left = 144.0
-offset_top = 136.0
-offset_right = 208.0
-offset_bottom = 176.0
-_button_text = "DefaultScene"
 
 [node name="AmbientAudioPlayer" type="AudioStreamPlayer" parent="." unique_id=1179099831]
 bus = &"SFX_panning"
