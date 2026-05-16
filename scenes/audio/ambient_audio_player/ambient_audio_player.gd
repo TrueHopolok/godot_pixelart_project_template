@@ -18,7 +18,11 @@ var _timer_player: Timer
 
 
 func _ready() -> void:
-	if bus != &"SFX" && bus != &"SFX_panning": printerr("Ambience Audio Player is not set on SFX bus")
+	if bus != &"SFX" && bus != &"SFX_panning":
+		printerr("Ambience Audio Player is not set on SFX bus")
+	if _ambient_sounds.is_empty():
+		printerr("Ambience Audio Player does not have any SFXs set")
+		return
 
 	_timer_player = Timer.new()
 	_timer_player.one_shot = true
