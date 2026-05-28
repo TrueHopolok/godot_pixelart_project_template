@@ -3,7 +3,7 @@ extends Slider
 
 
 @export var bus_name: StringName
-@onready var _audio_settings: AudioSettings = get_tree().get_first_node_in_group("AudioSettings")
+@onready var _audio_settings: AudioSettings = get_tree().get_first_node_in_group("settings_audio")
 var _bus_idx: int
 
 

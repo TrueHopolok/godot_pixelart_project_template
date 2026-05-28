@@ -16,5 +16,6 @@ Project setup:
 - Health component
 - Project archiceture (folder and etc)
 - Project config for pixelart games
+- Project warnings setup
 - Build configs and build directories
 - and maybe something else, I don't remember

@@ -1,21 +1,23 @@
 extends CanvasLayer
 
 
-const DURATION = 0.5
+const DURATION: float = 0.5
 
 
 func fade_in() -> void:
-	$ColorRect.show()
+	var bg: ColorRect = $ColorRect
+	bg.show()
 	var tween: Tween = create_tween()
-	tween.tween_property($ColorRect, 'color', Color(0, 0, 0, 1), DURATION)
+	tween.tween_property(bg, 'color', Color(0, 0, 0, 1), DURATION)
 	await tween.finished
 
 
 func fade_out() -> void:
+	var bg: ColorRect = $ColorRect
 	var tween: Tween = create_tween()
-	tween.tween_property($ColorRect, 'color', Color(0, 0, 0, 0), DURATION)
+	tween.tween_property(bg, 'color', Color(0, 0, 0, 0), DURATION)
 	await tween.finished
-	$ColorRect.hide()
+	bg.hide()
 
 
 ## Changes to given packed scene.

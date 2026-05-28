@@ -53,7 +53,7 @@ func _play_sound() -> void:
 	stream = _ambient_sounds.pick_random()
 	if _enable_bus_panning:
 		if _reset_panning_on_play: _effect_panner.pan = 0.5
-		var tween = get_tree().create_tween()
+		var tween: Tween = get_tree().create_tween()
 		var _delta_pan: float = randf_range(_min_panning, _max_panning) * [-1.0, 1.0].pick_random()
 		tween.tween_property(_effect_panner, ^'pan', _delta_pan, stream.get_length())
 	play()

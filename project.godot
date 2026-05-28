@@ -50,7 +50,6 @@ gdscript/warnings/static_called_on_instance=2
 gdscript/warnings/missing_tool=2
 gdscript/warnings/redundant_static_unload=2
 gdscript/warnings/redundant_await=2
-gdscript/warnings/missing_await=2
 gdscript/warnings/integer_division=0
 gdscript/warnings/confusable_identifier=2
 

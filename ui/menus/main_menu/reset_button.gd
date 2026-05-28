@@ -2,4 +2,4 @@ extends BetterButton
 
 
 func _on_press() -> void:
-	$ResetDialog.show()
+	($ResetDialog as Node2D).show()

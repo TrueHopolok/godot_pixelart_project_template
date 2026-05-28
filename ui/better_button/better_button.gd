@@ -2,6 +2,7 @@ class_name BetterButton
 extends Button
 
 
+# use load("sfx") to set some sfx as default
 @export var _press_sfx: AudioStream
 
 
@@ -16,7 +17,7 @@ func _on_press() -> void:
 
 
 func _set_sfx() -> void:
-	var press_sfx_player := AudioStreamPlayer.new()
+	var press_sfx_player: AudioStreamPlayer = AudioStreamPlayer.new()
 	press_sfx_player.stream = _press_sfx
 	pressed.connect(press_sfx_player.play)
 	add_child(press_sfx_player)
