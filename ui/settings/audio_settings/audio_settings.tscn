@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://i0n7cjiw24yl"]
+[gd_scene format=3 uid="uid://i0n7cjiw24yl"]
 
 [ext_resource type="Script" uid="uid://b4lw8m4s6631l" path="res://ui/settings/audio_settings/audio_settings.gd" id="1_lfgo3"]
 [ext_resource type="Script" uid="uid://cocpu06gyo2pv" path="res://ui/settings/audio_settings/audio_slider.gd" id="1_vska6"]
 
-[node name="AudioSettings" type="VBoxContainer" groups=["AudioSettings"]]
+[node name="AudioSettings" type="VBoxContainer" groups=["settings_audio"]]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -17,7 +17,7 @@ func _load() -> void:
 	var file: FileAccess = FileAccess.open(SAVE_PATH, FileAccess.READ)
 	if not file:
 		var err: Error = FileAccess.get_open_error()
-		if err != ERR_FILE_NOT_FOUND: printerr("Persistence loading error:", FileAccess.get_open_error())
+		if err != ERR_FILE_NOT_FOUND: printerr("[Persistence]: loading error:", FileAccess.get_open_error())
 		return
 	# NOTE: data = JSON.parse_string(file.get_as_text())
 	best_score = file.get_32()
@@ -28,10 +28,11 @@ func _load() -> void:
 func _save() -> void:
 	var file: FileAccess = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if not file:
-		printerr("Persistence saving error:", FileAccess.get_open_error())
+		push_error("[Persistence]: saving error:", FileAccess.get_open_error())
 		return
 	# NOTE: file.store_string(JSON.stringify(data))
-	file.store_32(best_score)
+	if not file.store_32(best_score):
+		push_error("[Persistence]: saving error:", FileAccess.get_open_error())
 	file.close()
 
 

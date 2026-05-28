@@ -19,9 +19,9 @@ var _timer_player: Timer
 
 func _ready() -> void:
 	if bus != &"SFX" && bus != &"SFX_panning":
-		printerr("Ambience Audio Player is not set on SFX bus")
+		push_error("[AmbienceAudioPlayer]: player is not set on SFX bus")
 	if _ambient_sounds.is_empty():
-		printerr("Ambience Audio Player does not have any SFXs set")
+		push_error("[AmbienceAudioPlayer]: player does not have any SFXs set")
 		return
 
 	_timer_player = Timer.new()
@@ -33,17 +33,17 @@ func _ready() -> void:
 
 	if _enable_bus_panning:
 		if bus != &"SFX_panning":
-			printerr("Ambience Audio Player is not set on SFX_panning bus\nenable panning is disabled")
+			push_warning("[AmbienceAudioPlayer]: player is not set on SFX_panning bus\nenable panning is disabled")
 			_enable_bus_panning = false
 			return
 		var bus_idx: int = AudioServer.get_bus_index(bus)
 		if AudioServer.get_bus_effect_count(bus_idx) != 1:
-			printerr("SFX_panning bus has invalid amount of effects\nenable panning is disabled")
+			push_warning("[AmbienceAudioPlayer]: SFX_panning bus has invalid amount of effects\nenable panning is disabled")
 			_enable_bus_panning = false
 			return
 		var effect: AudioEffect = AudioServer.get_bus_effect(bus_idx, 0)
 		if !is_instance_of(effect, AudioEffectPanner):
-			printerr("SFX_panning bus has invalid effect\nenable panning is disabled")
+			push_warning("[AmbienceAudioPlayer]: SFX_panning bus has invalid effect\nenable panning is disabled")
 			_enable_bus_panning = false
 			return
 		_effect_panner = effect
